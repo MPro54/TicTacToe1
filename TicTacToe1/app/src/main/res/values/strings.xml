@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="recommencer">Recommencer</string>
+    <string name="joueur_1">Joueur 1 :</string>
+    <string name="joueur_2">Joueur 2 :</string>
+    <string name="pts_1">Pts :</string>
+    <string name="pts_2">Pts :</string>
+    <string name="score_1">0</string>
+    <string name="score_2">0</string>
+    <string name="player_turn">C\'est au tour de ....</string>
+    <string name="quitter">Quitter</string>
+    <string name="start">JOUER</string>
+    <string name="msg_start">Entrez le noms des 2 joueurs</string>
+    <string name="player2_hint" >Entrez le nom du joueur 2</string>
+    <string name="player1_hint" >Entrez le nom du joueur 1</string>
+    <string name="cell1">Cellule 1 du jeu Tic Tac Toe</string>
+    <string name="cell2">Cellule 2 du jeu Tic Tac Toe</string>
+    <string name="cell3">Cellule 3 du jeu Tic Tac Toe</string>
+    <string name="cell4">Cellule 4 du jeu Tic Tac Toe</string>
+    <string name="cell5">Cellule 5 du jeu Tic Tac Toe</string>
+    <string name="cell6">Cellule 6 du jeu Tic Tac Toe</string>
+    <string name="cell7">Cellule 7 du jeu Tic Tac Toe</string>
+    <string name="cell8">Cellule 8 du jeu Tic Tac Toe</string>
+    <string name="cell9">Cellule 9 du jeu Tic Tac Toe</string>
+</resources>

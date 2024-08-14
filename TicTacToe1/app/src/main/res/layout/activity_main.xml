@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtplayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/joueur_1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtplayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/joueur_2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtplayer1" />
+
+    <EditText
+        android:id="@+id/player1"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:focusable="auto"
+        android:hint="@string/player1_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txtplayer1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/player2"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/player2_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#404040"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txtplayer2"
+        app:layout_constraintTop_toBottomOf="@+id/player1"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/txtPts1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="97dp"
+        android:text="@string/pts_1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/player1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPts2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/pts_2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/player2"
+        app:layout_constraintTop_toBottomOf="@+id/txtPts1" />
+
+    <TextView
+        android:id="@+id/txtScore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="95dp"
+        android:text="@string/score_1"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txtPts1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/txtScore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:text="@string/score_2"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txtPts2"
+        app:layout_constraintTop_toBottomOf="@+id/txtScore1"
+        tools:ignore="VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/txtPlayerTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:text="@string/player_turn"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="restartGame"
+        android:text="@string/recommencer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="quitGame"
+        android:text="@string/quitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toTopOf="@+id/txtPlayerTurn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2">
+
+        <ImageView
+            android:id="@+id/cell1"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:contentDescription="@string/cell1"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            tools:ignore="LabelFor" />
+
+
+        <ImageView
+            android:id="@+id/cell2"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell2"
+            tools:ignore="LabelFor"/>
+
+        <ImageView
+            android:id="@+id/cell3"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell3"
+            tools:ignore="LabelFor"/>
+
+        <ImageView
+            android:id="@+id/cell4"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell4"
+            tools:ignore="LabelFor"/>
+
+        <ImageView
+            android:id="@+id/cell5"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell5"
+            tools:ignore="LabelFor"/>
+
+        <ImageView
+            android:id="@+id/cell6"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell6"
+            tools:ignore="LabelFor"/>
+
+        <ImageView
+            android:id="@+id/cell7"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell7"
+            tools:ignore="LabelFor"/>
+
+        <ImageView
+            android:id="@+id/cell8"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell8"
+            tools:ignore="LabelFor"/>
+
+        <ImageView
+            android:id="@+id/cell9"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="@android:color/black"
+            android:padding="2dp"
+            android:clickable="true"
+            android:onClick="cellClicked"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:contentDescription="@string/cell9"
+            tools:ignore="LabelFor"/>
+
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:onClick="checkPlayers"
+        android:text="@string/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2" />
+
+    <TextView
+        android:id="@+id/txtmsg"
+        android:layout_width="500dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/msg_start"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,VisualLintBounds" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
